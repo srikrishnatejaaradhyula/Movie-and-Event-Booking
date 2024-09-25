@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h1>Thank for Booking {{user_name}}</h1>
+    <h4>Your booking has been confirmed for</h4>
+        <table border="1">
+            <tr>
+                <th>Movie</th>
+                <th>Date</th>
+                <th>Time</th>
+                <th>Seats</th>
+                <th>Price</th>
+            </tr>
+            <tr>
+                <td>{{movie_title}}</td>
+                <td>{{date}}</td>
+                <td>{{time}}</td>
+                <td>
+                    {% for j in seats %}
+                    {{j}}
+                    {% endfor %}
+                </td>
+                <td>{{price}}</td>
+            </tr>
+        </table>
+</body>
+</html>
